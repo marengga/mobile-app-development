@@ -2,16 +2,14 @@ import React, { Component } from 'react';
 import { Text, View } from 'react-native';
 
 export default class App extends Component {
-  constructor(){
-    super();
-    this.kalimat = "Kalimat dari constructor!";
+  kali(a,b){
+    return a*b;
   }
-
   render() {  
     return (
       <View>
         <Text style={{ marginTop: 100 }}>
-          {this.kalimat}
+          Hitung 15 x 20 = {this.kali(15,20)}
         </Text>
       </View>
     );
