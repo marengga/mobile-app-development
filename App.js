@@ -4,43 +4,25 @@ import { Text, View, StyleSheet } from 'react-native';
 export default class App extends Component {
   render() {
     return (
-      <View style={{ marginTop: 100 }}>
-        <Text style={style.a}>
-          Life is so colorful!
-        </Text>
-        <Text style={style.b}>
-          Life is so colorful!
-        </Text>
-        <Text style={[style.a, style.b]}>
-          Life is so colorful!
-        </Text>
-        <Text style={[style.b, style.a]}>
-          Life is so colorful!
-        </Text>
+      <View>
+        <View style={{ flexDirection: 'row', marginTop: 50 }}>
+          <View style={{ width: 50, height: 50, backgroundColor: 'powderblue' }} />
+          <View style={{ width: 50, height: 50, backgroundColor: 'skyblue' }} />
+          <View style={{ width: 50, height: 50, backgroundColor: 'steelblue' }} />
+        </View>
+
+        <View style={{ flexDirection: 'column', justifyContent: 'space-between', marginTop: 50, height: 200, backgroundColor: '#eee' }}>
+          <View style={{ width: 50, height: 50, backgroundColor: 'powderblue' }} />
+          <View style={{ width: 50, height: 50, backgroundColor: 'skyblue' }} />
+          <View style={{ width: 50, height: 50, backgroundColor: 'steelblue' }} />
+        </View>
+
+        <View style={{ flexDirection: 'column', justifyContent: 'center', alignItems: 'stretch', marginTop:50 }}>
+          <View style={{ width: 50, height: 50, backgroundColor: 'powderblue' }} />
+          <View style={{ height: 50, backgroundColor: 'skyblue' }} />
+          <View style={{ height: 100, backgroundColor: 'steelblue' }} />
+        </View>
       </View>
     );
   }
 }
-
-const style = StyleSheet.create({
-  a: {
-    fontSize: 40,
-    fontStyle: 'italic',
-    fontWeight: 'bold',
-    textAlign: 'center',
-    color: 'yellow',
-    backgroundColor: 'blue',
-    marginVertical: 20,
-    marginHorizontal: 15
-  },
-  b: {
-    fontSize: 25,
-    fontStyle: 'italic',
-    fontWeight: 'bold',
-    textAlign: 'center',
-    color: 'red',
-    backgroundColor: 'green',
-    marginVertical: 20,
-    marginHorizontal: 15
-  }
-})
