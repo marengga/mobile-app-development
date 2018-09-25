@@ -13,18 +13,20 @@ export default class App extends Component {
   }
 
   render() {
-    setTimeout(() =>{
+    setTimeout(() => {
       this.setState({
-        usia: this.state.usia+1
+        usia: this.state.usia + 1
       })
     }, 2000);
 
     return (
       <View style={{ marginTop: 100 }}>
-        <Header />
+        <Header content='Props dari App.js' />
 
-        <Text style={{fontSize:50}}>Halo {this.state.nama}!</Text>
-        <Text style={{fontSize:50}}>Usia kamu saat ini {this.state.usia} tahun ya?</Text>
+        <Text style={{ fontSize: 50 }}>Halo {this.state.nama}!</Text>
+        <Text style={{ fontSize: 50 }}>
+          Usia kamu saat ini {this.state.usia} tahun ya?
+        </Text>
 
         <Footer />
       </View>
