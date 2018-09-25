@@ -3,15 +3,15 @@ import { Text, View } from 'react-native';
 
 export default class App extends Component {
   render() {
-    function kali(a,b){
-      return a*b;
-    }
+    const teman = ['Ali', 'Baba', 'Caca', 'Didu'];
+    const listTeman = teman.map((teman, index) => {
+      return <Text key={index}>- {teman}</Text>
+    });
 
     return (
-      <View>
-        <Text style={{ marginTop: 100 }}>
-          Hitungin 12 x 34 = {kali(12, 34)}
-        </Text>
+      <View style={{ marginTop: 100 }}>
+        <Text>Saya punya {teman.length} teman, mereka adalah:</Text>
+        {listTeman}
       </View>
     );
   }
