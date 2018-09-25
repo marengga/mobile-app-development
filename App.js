@@ -18,7 +18,7 @@ export default class App extends Component {
       this.setState({
         usia: this.state.usia + 1
       });
-    }, 2000);
+    }, 3000);
 
     return (
       <View style={{ marginTop: 100 }}>
@@ -32,5 +32,21 @@ export default class App extends Component {
         <Footer content={this.state.data} />
       </View>
     );
+  }
+
+  componentWillMount() {
+    console.log("will mount");
+  }
+
+  componentDidMount() {
+    console.log("did mount");
+  }
+
+  componentWillUpdate() {
+    console.log("will update");
+  }
+
+  componentDidUpdate() {
+    console.log("did update");
   }
 }
