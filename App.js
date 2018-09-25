@@ -8,7 +8,8 @@ export default class App extends Component {
     super();
     this.state = {
       nama: "Vincent",
-      usia: 15
+      usia: 15,
+      data: "State yang akan jadi Props"
     };
   }
 
@@ -16,19 +17,19 @@ export default class App extends Component {
     setTimeout(() => {
       this.setState({
         usia: this.state.usia + 1
-      })
+      });
     }, 2000);
 
     return (
       <View style={{ marginTop: 100 }}>
-        <Header content='Props dari App.js' />
+        <Header content="Props dari App.js" />
 
         <Text style={{ fontSize: 50 }}>Halo {this.state.nama}!</Text>
         <Text style={{ fontSize: 50 }}>
           Usia kamu saat ini {this.state.usia} tahun ya?
         </Text>
 
-        <Footer />
+        <Footer content={this.state.data} />
       </View>
     );
   }
