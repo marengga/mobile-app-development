@@ -13,6 +13,12 @@ export default class App extends Component {
   }
 
   render() {
+    setTimeout(() =>{
+      this.setState({
+        usia: this.state.usia+1
+      })
+    }, 2000);
+
     return (
       <View style={{ marginTop: 100 }}>
         <Header />
